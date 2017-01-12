@@ -2,15 +2,22 @@
 
 int main(void) 
 {
-    int num;
+    int num,temp=0,i;
     scanf("%d", &num);
     num++;
-    while((num%2 == 0) || (num%3 == 0))
+    while(temp != 1)
     {
-        if((num%2 == 0) || (num%3 == 0))
+        temp=1;
+        for(i=2;i<num/2;i++)
         {
-            num+=1;
+            if(num%i == 0)
+            {
+                temp=0;
+                num+=1;
+                break;
+            }
         }
+        
     }
     printf("%d", num);
     
