@@ -25,17 +25,21 @@ void main()
 			system("cls");
 		for(p=0;p<n;p++)
 		{
-			printf("--------------------\n|");
+			printf("--------------------\n");
 			for(q=0;q<n;q++)
 			{ 
 				if(arr[p][q]== ' ')
 				{
-					printf(" %c |", arr[p][q]);
+					printf("| %c |", arr[p][q]);
 				}
-				else
+				else if(arr[p][q]<=9)
 			     {
-				 printf(" %d | ", arr[p][q]);
+				 printf("| %d |", arr[p][q]);
 			     }
+			     else
+			     {
+			     	printf("| %d|", arr[p][q]);
+				 }
 			}
 			printf(" \n ");
 		}
