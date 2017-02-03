@@ -3,6 +3,7 @@
 void main()
 {
 	int n,x,p,a,q,i,j,temp,m,l=0;
+	printf("Enter value of n matric\n");
 	scanf("%d", &n);
 	int arr[n][n];
 	char ch;
