@@ -10,7 +10,7 @@ struct node* createnode()
 	int val;
 	struct node* newnode;
 	newnode=(struct node*)malloc(sizeof(struct node));
-	scanf("%d",&val);
+	scanf("%d", &val);
 	newnode->data = val;
 	newnode->next = NULL;
 	return newnode;
@@ -40,33 +40,37 @@ void search(int _value)
 	temp = head;
 	
 	int count=1;
-	while(temp!=NULL && temp->data!=_value)
+	while(temp!=NULL)
 	{
+		if(temp->data == _value)
+		{
+		printf(" %d is present in the position %d", temp->data, count);
+		break;
+		}
 		temp=temp->next;
 		count++;
 	}
-	if(temp->data == _value)
-	{
-		printf(" %d is present in the %drd position", temp->data, count);
-	}
-	if(temp==NULL)
+	
+	 if(temp==NULL)
 	{
 		printf(" %d does not exist", _value);
+		
 	}
 }
-void main()
+int main()
 {
 	head=NULL;
-	int i,num,value;
-	printf("Enter the number of elements");
-	scanf("%d",&num);
-	printf("Enter the elements");
+	int i,value,num;
+	printf("Enter the number of elements\n");
+	scanf("%d", &num);
+	printf("\nEnter the elements\n");
 	for(i=0;i<num;i++)
 	{
 		add();
+		
 	}
-	//printf("%d\n", head->data);
-	printf("Enter the value to be searched");
+	printf("\nEnter the value to be searched\n");
 	scanf("%d", &value);
 	search(value);
+	return 0;
 }
