@@ -24,5 +24,16 @@ void main()
 			}
 		}
 	}
+	if(max==0)
+	{
+		printf("No even number in the array");
+	}
+	else if(min == 0)
+	{
+		printf("only one even number is present in the array %d", max);
+	}
+	else
+	{
 	printf("\n%d", min);
+	}
 }
